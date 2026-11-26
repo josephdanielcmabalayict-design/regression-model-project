@@ -396,29 +396,6 @@ print("Residual sum of squares:", np.sum(residuals**2))
 # J. VISUALIZATIONS
 # ============================================================
 
-# 1. Correlation Matrix
-
-correlation_matrix = df[FEATURES].corr()
-
-plt.figure(figsize=(7, 5))
-
-plt.imshow(
-    correlation_matrix,
-    cmap="coolwarm",
-    vmin=-1,
-    vmax=1
-)
-
-plt.colorbar(label="Correlation")
-
-plt.xticks(range(p), FEATURES, rotation=30, ha="right")
-plt.yticks(range(p), FEATURES)
-
-plt.title("Student Feature Correlation Matrix")
-plt.tight_layout()
-plt.savefig("correlation_matrix.png", dpi=180)
-plt.show()
-
 
 # 2. PCA Scree Plot
 
@@ -498,29 +475,6 @@ plt.tight_layout()
 plt.savefig("predicted_vs_actual.png", dpi=180)
 plt.show()
 
-
-# 5. Residual Plot
-
-plt.figure(figsize=(6, 4))
-
-plt.scatter(
-    pred_full,
-    residuals,
-    alpha=0.85
-)
-
-plt.axhline(
-    y=0,
-    linestyle="--"
-)
-
-plt.xlabel("Predicted Academic Score")
-plt.ylabel("Residual")
-plt.title("Residual Analysis")
-
-plt.tight_layout()
-plt.savefig("residual_plot.png", dpi=180)
-plt.show()
 
 
 print("\n========================================")
