@@ -35,7 +35,7 @@ FEATURES = [
 
 TARGET = "Academic_Score_0_to_100"
 
-DATASET_FILE = "synth.csv"
+DATASET_FILE = "dataset.csv"
 
 
 # ============================================================
